@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2 # $GITHUB_WORKSPACE  is a temp variable
+      - name: npm install
+        uses: Npm@1
       - name: Hello world action step
         id: hello
         # instead of giving a public action we will give the action that we just created
