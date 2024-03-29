@@ -18,7 +18,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-        uses: actions/Npm@1
+
       - name: Hello world action step
         id: hello
         # instead of giving a public action we will give the action that we just created
