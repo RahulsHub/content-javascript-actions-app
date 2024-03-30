@@ -14,18 +14,19 @@ jobs:
         uses: actions/checkout@v2 # $GITHUB_WORKSPACE  is a temp variable
       - name: Use Node.js ${{ matrix.node-version}}
         uses: actions/setup-node@v2
+
       - name: npm install, build and test example
         run: |
           npm install
           npm run build --if-present
 
-      - name: Hello world action step
-        id: hello
-        # instead of giving a public action we will give the action that we just created
-        # uses: actions/javascript-actions@v1
-        # uses: ./
-        # with:
-        #   who-to-greet: "rahul"
+      # - name: Hello world action step
+      #   id: hello
+      # instead of giving a public action we will give the action that we just created
+      # uses: actions/javascript-actions@v1
+      # uses: ./
+      # with:
+      #   who-to-greet: "rahul"
       # use output from the hello step
       - name: get the output time
         run: echo "the time was ${{ steps.hello.outputs.time }}"
