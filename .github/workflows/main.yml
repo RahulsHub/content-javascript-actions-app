@@ -23,9 +23,9 @@ jobs:
         id: hello
         # instead of giving a public action we will give the action that we just created
         # uses: actions/javascript-actions@v1
-        uses: ./
-        with:
-          who-to-greet: "rahul"
+        # uses: ./
+        # with:
+        #   who-to-greet: "rahul"
       # use output from the hello step
       - name: get the output time
         run: echo "the time was ${{ steps.hello.outputs.time }}"
